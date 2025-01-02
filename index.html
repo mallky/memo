@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игра Мемо</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="setup-container">
+        <div class="players-input">
+          <input type="number" id="playerCount" min="2" max="6" value="2" />
+          <button id="setPlayers">Установить количество игроков</button>
+        </div>
+        <div id="playerNames" class="player-names">
+          <div class="player-input">
+            <input type="text" placeholder="Имя игрока 1" data-player="1" />
+          </div>
+          <div class="player-input">
+            <input type="text" placeholder="Имя игрока 2" data-player="2" />
+          </div>
+        </div>
+        <button id="startGame">Начать игру</button>
+      </div>
+      <div class="game-content">
+        <div class="game-board" style="display: none"></div>
+        <div class="players-container" style="display: none"></div>
+      </div>
+      <button class="reset-button" style="display: none">Сбросить игру</button>
+    </div>
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
