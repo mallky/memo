@@ -24,8 +24,12 @@ export class GameHandlers {
   };
 
   handleTileClick = (event) => {
-    if (this.gameState.flippedTiles.length < 2) {
-      const tile = event.currentTarget;
+    const tile = event.currentTarget;
+    if (
+      !tile.classList.contains("flipped") &&
+      !tile.classList.contains("matched") &&
+      this.gameState.flippedTiles.length < 2
+    ) {
       tile.classList.add("flipped");
       this.gameState.flippedTiles.push(tile);
       if (this.gameState.flippedTiles.length === 2) {
